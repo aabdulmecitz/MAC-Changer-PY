@@ -9,8 +9,6 @@ parse_obj.add_option("-m","--mac", dest='mac',help='mac to change')
 interface = inputs.interface
 mac = inputs.mac
 
-print("function started")
-
 subprocess.call(["ifconfig", interface , "down"])
 subprocess.call(["ifconfig", interface , "hw", "ether", mac])
 subprocess.call(["ifconfig", interface , "up"])
